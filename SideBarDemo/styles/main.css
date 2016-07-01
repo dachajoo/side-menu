@@ -19,7 +19,7 @@ body {
   font-size: 13px;
   line-height: 1.42857143;
   color: #999999;
-  background-color: #f0f2f5;
+  background-color: #edf0f2;
   height: 100%;
 }
 input,
@@ -89,7 +89,7 @@ hr {
 @media (min-width: 768px) {
   #page-wrapper {
     position: relative;
-    margin: 50px 0 0 250px;
+    margin: 55px 0 0 250px;
     padding: 30px;
   }
 }
@@ -165,12 +165,10 @@ hr {
     right: 20px;
     top: 17px;
 }
-#menu-toggle2{
-  display: none;
-}
+
 #sidebar {
-  background: #3C3C3C;
-  top: 52px;
+  background: #ffffff;
+  top: 55px;
 }
 .navbar-static-side {
   transition: 0.3s all linear;
@@ -209,12 +207,17 @@ hr {
 .navbar-static-side ul li a {
   color: #41484e;
   padding: 15px;
+  display: block!important;
+}
+#menu-toggle2{
+  display: none!important;
 }
 .navbar-static-side ul li a span.menu-title {
   margin-left: 10px;
 }
 .navbar-static-side ul li a i {
   font-size: 16px;
+  color: #0c9ed3;
 }
 .navbar-static-side ul li a i .icon-bg {
   display: none;
@@ -500,7 +503,7 @@ overflow: hidden;
 @media (min-width: 840px) {
 
     #menu-toggle{
-  display: block;
+  display: block!important;
 }
   #menu-toggle2{
   display: none;
