@@ -1,3 +1,6 @@
+@import 'fonts.css';
+@import 'tgl.css';
+
 @font-face {
   font-family: 'Glyphicons Halflings';
   src:  url('fonts/glyphicons-halflings-regular.woff2'),
@@ -5,6 +8,32 @@
         url('fonts/glyphicons-halflings-regular.svg'),
         url('fonts/glyphicons-halflings-regular.eot'),
         url('fonts/glyphicons-halflings-regular.ttf');
+}
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.1); 
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: rgba(255,255,255,1); 
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+	 border:solid 2px #fff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+
+    background: rgba(0,0,0,0.1); 
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.1); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0,0,0,0.1); 
 }
 .disabled{
 	opacity: 0.3;
@@ -20,8 +49,9 @@
 	text-align: right;
 }
 
+
 body {
-	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	font-family: open_sansregular, Arial, sans-serif;
 	color: #4e5861;
 	}
 a{
@@ -54,6 +84,19 @@ input {
     border: 1px solid #d1d1cf;
     margin: 0 0 15px 0;
     padding-left: 10px!important;
+}
+input[type=radio], input[type=checkbox] {
+    margin: 4px 0 0;
+    line-height: normal;
+}
+.toggle input[type=radio], .toggle input[type=checkbox] {
+	width: 4em;
+	margin:0; 
+}
+
+input[type=radio]:focus, input[type=checkbox]:focus {
+	outline: none;
+	border:none;
 }
 button[disabled], html input[disabled] {
     cursor: default;
@@ -120,7 +163,7 @@ a:hover{
 }
 .panel{
 	border: 0px;
-	border-radius: 10px;
+	border-radius: 0px;
 	margin-bottom: 0;
 }
 .breadcrumb {
@@ -149,11 +192,11 @@ table tbody tr td:last-child, table thead tr th:last-child{
 } 
 table tbody tr td a{
 	color: #4e5861;
-	font-size: 16px;
+	font-size: 14px;
 } 
 .breadcrumb {background: rgba(255, 255, 255, 0); border: 0px solid rgba(255, 255, 255, 0); border-radius: 4px; display: block;}
 .breadcrumb li {
-	font-size: 16px;
+	font-size: 14px;
     padding: 10px 15px;
     }
 .breadcrumb a {}
@@ -285,6 +328,7 @@ button:active{
 .navbar-fixed-top {
     border-bottom: solid 2px #b2b7bb;
     background: #ffffff;
+    z-index: 999999;
     }
 
 .navbar-header{
@@ -312,7 +356,7 @@ button:active{
 	float: right;
 	background: #ffffff;
 	height: 53px;
-    padding: 12px 0;
+    padding: 14px 0 12px 0;
     
 
 }
@@ -330,7 +374,7 @@ button:active{
 .username .username-in {
     height: 100%;
     color: #333d47;
-    font-size: 16px;
+    font-size: 14px;
     display: block;
     padding-right: 27px;
     padding-top: 5px;
@@ -338,8 +382,9 @@ button:active{
     border-right: solid 1px rgba(79, 68, 98, 0.2);
 }
 .username .username-in:hover {
-    
-    color: #333d47;
+    color: #0c9ed3;
+    background-color: #fff;
+    text-decoration: none;
     
 }
 .username .username-in:before{
@@ -401,6 +446,21 @@ button:active{
 	position:relative;
 
 }
+.top-icons .dropdown{
+	float: right;
+	height: 53px;
+	width: 53px;
+	position:relative;
+}
+.top-icons .dropdown:before{
+	font-family: FontAwesome;
+	position: absolute;
+	top: 17px;
+	left: 17px;
+	font-size: 20px;
+	color: #0c9ed3;
+}
+
 .top-icons .search:before{
 	font-family: FontAwesome;
 	position: absolute;
@@ -415,7 +475,7 @@ button:active{
 .nav>li>a {
      padding: 0;
      height: 50px;
-     font-size: 16px;
+     font-size: 14px;
      width: 100%;
      display: block;
      color: #4f5862;
@@ -660,7 +720,7 @@ td .photo{
 	padding: 10px 20px 20px 20px;
 }
 .user-card .info label{
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 	float: left;
 	display: block;
@@ -669,7 +729,8 @@ td .photo{
 	width: auto;
 }
 .user-card .info p{
-	font-size: 16px;
+	width: 100%;
+	font-size: 14px;
 	font-weight: normal;
 	float: left;
 	display: block;
@@ -677,7 +738,8 @@ td .photo{
 	    line-height: 25px;
 }
 .user-card .info a{
-	font-size: 16px;
+	width: 100%;
+	font-size: 14px;
 	font-weight: normal;
 	float: left;
 	padding:0;
@@ -706,7 +768,7 @@ background: -1px -1px url(images/sponsors-icon.png) #ffffff;
 	right: 12px;
 	top: 12px;
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 14px;
 	cursor: pointer;
 	text-transform: none;
 }
@@ -744,7 +806,7 @@ background: -1px -1px url(images/sponsors-icon.png) #ffffff;
 	background-color: #ffffff;
 	text-transform:none;
 	font-weight: normal; 
-	font-size: 16px;
+	font-size: 14px;
 	border-radius: 10px 10px 0px 0px;
 	padding: 0;
 	position: relative;
@@ -754,8 +816,7 @@ background: -1px -1px url(images/sponsors-icon.png) #ffffff;
 .panel-default>.panel-heading h3{
 	margin: 0;
 	padding: 15px 15px 20px 15px;
-	font-weight: bold;
-
+	font-family: 'open_sansbold'
 
 }
 .panel-default>.panel-heading h3:before{
@@ -774,6 +835,7 @@ background: -1px -1px url(images/sponsors-icon.png) #ffffff;
 .panel-default>.panel-heading .bluebtn{
 margin-left: 0;
 float: right;
+max-width: 150px;
 
 
 }
@@ -828,11 +890,11 @@ float: right;
 	margin-right: 10px;
 	float: left;
 	display: block;
-	font-size: 16px;
+	font-size: 14px;
 
 }
 .main .panel-body .field p{
-	font-size: 16px;
+	font-size: 14px;
 	display: block;
 	float: left;
 	color:#333D47;
@@ -843,7 +905,7 @@ float: right;
 	padding-top: 1px;
     display: block;
     float: left;
-    font-size: 16px;
+    font-size: 14px;
 }
 .buttonsdiv{
 	width: 173px;
@@ -855,7 +917,7 @@ float: right;
 .editbtn {
 	display:none;
 	position: absolute;
-	font-size: 16px;
+	font-size: 14px;
 	right: 7px;
 	margin-top: -4px;
 	padding: 3px 20px;
@@ -873,7 +935,7 @@ float: right;
 }
 
 .main .panel-body .field input{
-	font-size: 16px;
+	font-size: 14px;
 	margin-right: 0px;
 	margin-top: -4px;
 	margin-left: -8px;
@@ -904,7 +966,7 @@ float: right;
 	display: block;
 }
 .main .panel-body .field .cancelbtn{
-	font-size: 16px;
+	font-size: 14px;
 	width: 80px;
 	margin-right: 0px;
 	margin-top: -4px;
@@ -1126,7 +1188,7 @@ border-bottom: 2px solid #dee1e4;
 .table>thead>tr>th {
 cursor: pointer;
 font-size: 14px;
-font-weight: bold;
+font-family: 'open_sansbold';
 padding: 7px 25px 7px 10px;
 
 }
@@ -1234,7 +1296,7 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
 .modal-content p{
 	padding-bottom: 0;
 	margin-bottom: 0;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 }
 .modal-content .instructions{
@@ -1296,7 +1358,7 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
 	background-color: #505863;
 	text-transform: uppercase;
 	font-weight: normal; 
-	font-size: 16px;
+	font-size: 14px;
 	border-radius: 10px 10px 0px 0px;
 	padding: 0;
 	position: relative;
@@ -1306,7 +1368,7 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
 	color: #ffffff;
 	text-transform: uppercase;
 	font-weight: normal; 
-	font-size: 16px;
+	font-size: 14px;
 	padding: 11px 15px 8px 15px;
 
 }
@@ -1450,20 +1512,26 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
 .tiles:nth-child(4){
     margin-right: 0;
 }
+.panel-default>.panel-heading .bluebtn{
+max-width: 100%;
+}
 
 }
 @media (max-width: 840px ){
 		#page-wrapper {
     margin-top: 100px;
 }
+.panel-default>.panel-heading .bluebtn{
+max-width: 100%;
+}
 }
 
 @media (max-width: 769px ){
 	#sidebar {
-    top: 102px;
+    top: 103Px;
 }
 	#page-wrapper {
-    margin-top: 100px;
+    margin-top: 105px;
 }
 	.dropdown{
 	display: block;
@@ -1544,11 +1612,14 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
     padding: 0;
     max-width: 50%;
 }
+.panel-default>.panel-heading .bluebtn{
+max-width: 100%;
+}
 }
 
 @media (max-width: 480px ){
 #page-wrapper {
-    margin-top: 100px;
+    margin-top: 158px;
 }
 		.dropdown{
 	display: block;
@@ -1572,6 +1643,32 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
 	overflow-y: scroll;
 
 }
+.navbar-header .top-logo .pull-left {
+    width: 95%;
+}
+#sidebar {
+    top: 157px;
+}
+.top-icons {
+    float: right;
+    background: #ffffff;
+    height: 53px;
+    padding: 0;
+    max-width: 100%;
+}
+.username {
+    float: left;
+    background: #ffffff;
+    height: 53px;
+    width: 100%;
+    padding: 14px 0 12px 0;
+}
+.username .username-in {
+    float: left!important;
+    border-right: none;
+    padding-left: 20px;
+   
+}
 .sidebar{
 	    display: block;
     clear: both;
@@ -1580,6 +1677,7 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
     width: 100%;
 	display:block;
 }
+
 .navbar-header{
 	margin-right: 0%!important;
 	margin-left: 0%!important;

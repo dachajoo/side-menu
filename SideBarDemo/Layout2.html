@@ -17,6 +17,8 @@
     <link type="text/css" rel="stylesheet" href="styles/main.css">
     <link type="text/css" rel="stylesheet" href="styles/style-responsive.css">
     <link type="text/css" rel="stylesheet" href="styles/styles.css">
+
+
     
 </head>
 <body>
@@ -36,10 +38,11 @@
             </div>
           </div>
           <div class="col-md-2 col-sm-12 top-icons">
+          	<a data-toggle="collapse" data-target=".sidebar-collapse"  class="pull-right fa fa-bars dropdown" href="#"></a>
             <a class="pull-right faq" href="#"></a>
             <a class="pull-right settings" href="#"></a>
             <a class="pull-right search" href="#"></a>
-            <a data-toggle="collapse" data-target=".sidebar-collapse"  class="pull-right fa fa-bars dropdown" href="#"></a>
+            
           </div>
           <div class="col-md-3 username">
             <a class="pull-right username-in fa" href="#">Michael Fassbender</a>     
@@ -75,16 +78,18 @@
                          <div class="username-left">
                              <div class="fa photo"></div>
                              <label>Admin</label>
+                             <div class="clearfix"></div>    
                          </div>
                         <div class="info col-sm-3 col-md-2">
                         <p>Michael J. Fassbender, Sr</p>
                         <a href="mailto:mfassbender@bioclinica.com">mfassbender@bioclinica.com</a>
                         <p>+123 2344 2345</p>
+                        <div class="clearfix"></div>    
 
                         </div>
-                        
+                    <div class="clearfix"></div>    
                     </div>
-                        <div class="clearfix"></div>
+                        
                        
                     </li>
                     
@@ -140,14 +145,16 @@
             <div class="page-content">
             <div class="jumbotron">
               <div class="panel panel-default">
+
                 <div class="col-md-12 no-gutter panel-heading">
-                    <h3 class="col-md-10">Users</h3>
-                    <div class="col-md-2 no-gutter right-button">
-                      <button data-toggle="modal" data-target="#addUser" class="col-md-12 no-gutter savebtn bluebtn">+Add New User</button>
+                    <h3 class="col-md-9">Users</h3>
+                    <div class="col-md-3 col-sm-12 col-xs-12 no-gutter right-button">
+                      <button data-toggle="modal" data-target="#addUser" class="col-md-12 col-sm-12 col-xs-12 no-gutter savebtn bluebtn">+Add New User</button>
                     </div>
                 </div>
                 <div class="clearfix"></div>
               <div class="row table-cont">
+         
               <table data-toggle="table" class="sortable table table-striped">
                 <thead>
                   <tr>
@@ -168,7 +175,9 @@
                   <tr>
                     <td class="col-md-2"><a href="#">LastName, First Name MN, Suf</a></td>
                     <td  class="col-md-2"><a href="#">email@mail.com</a></td>
-                    <td  class="col-md-1"><a href="#">ENABLED</a></td>
+                    <td  class="col-md-1">
+                    							<div class="toggle"><input id="cb1" type="checkbox" class="tgl tgl-light"/><label for="cb1" class="tgl-btn"></label></div>
+    				</td>
                     <td align='center' class="col-md-1 bubble products-row"><a href="#">1</a></td>
                     <td align='center' class="col-md-1 bubble customers-row "><a href="#">1</a></td>
                     <td align='center' class="col-md-1 bubble cros-row"><a href="#">2</a></td>
@@ -181,7 +190,9 @@
                   <tr>
                     <td class="col-md-2"><a href="#">LastName, First Name MN, Suf</a></td>
                     <td  class="col-md-2"><a href="#">email@mail.com</a></td>
-                    <td  class="col-md-1"><a href="#">ENABLED</a></td>
+                    <td  class="col-md-1">
+                    							<div class="toggle"><input id="cb2" type="checkbox" class="tgl tgl-light"/><label for="cb2" class="tgl-btn"></label></div>
+    				</td>
                     <td align='center' class="col-md-1 bubble products-row"><a href="#">1</a></td>
                     <td align='center' class="col-md-1 bubble customers-row "><a href="#">1</a></td>
                     <td align='center' class="col-md-1 bubble cros-row"><a href="#">2</a></td>
@@ -193,7 +204,9 @@
                   <tr>
                     <td class="col-md-2"><a href="#">LastName, First Name MN, Suf</a></td>
                     <td  class="col-md-2"><a href="#">email@mail.com</a></td>
-                    <td  class="col-md-1"><a href="#">ENABLED</a></td>
+                    <td  class="col-md-1">
+                    							<div class="toggle"><input id="cb3" type="checkbox" class="tgl tgl-light"/><label for="cb3" class="tgl-btn"></label></div>
+    				</td>
                     <td align='center' class="col-md-1 bubble products-row"><a href="#">1</a></td>
                     <td align='center' class="col-md-1 bubble customers-row "><a href="#">1</a></td>
                     <td align='center' class="col-md-1 bubble cros-row"><a href="#">2</a></td>
@@ -220,6 +233,10 @@
             <!--END PAGE WRAPPER-->
         </div>
     </div>
+ 
+  <script src="script/bootstrap-toggle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="script/jquery-1.10.2.min.js"></script>
     <script src="script/jquery-migrate-1.2.1.min.js"></script>
     <script src="script/jquery.menu.js"></script>
