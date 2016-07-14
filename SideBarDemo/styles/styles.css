@@ -1,5 +1,6 @@
 @import 'fonts.css';
 @import 'tgl.css';
+@import 'w3.css';
 
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -349,6 +350,8 @@ button:active{
 .navbar-header .top-logo img{
 	 width: 100%;
     height: auto;
+        max-width: 360px;
+         min-width: 360px;
 
 }
 
@@ -534,9 +537,21 @@ button:active{
 .nav li .product-title i{
 		color:#FFFFFF;
 }
-.nav li .product-title:hover{
+.navbar-static-side ul .product-title{
 		background-color: #e0c450!important;
-		color: #fff;
+	
+}
+.navbar-static-side ul .product-title a{
+		background-color:transparent;
+		color: #ffffff;
+}
+.navbar-static-side ul .product-title a{
+		background-color:transparent;
+		color: #ffffff;
+}
+.navbar-static-side ul .product-title i{
+		background-color:transparent;
+		color: #ffffff;
 }
 .nav li .product-title:focus{
 		background-color: #e0c450!important;
@@ -659,15 +674,20 @@ width: initial;
 	width: 100%;
 	display:block;
 	clear: both;
+	background-color: #f0f0f0;
 
 }
 .user-card .username-left{
 	display: block;
-	width: 100%;
+	width: 250px;
 	min-height: 50px;
 	height: auto;
 	clear: both;
 	padding: 10px 20px 0 20px;
+	
+}
+.navbar-static-side ul .product-title .info a{
+	color: inherit;
 	
 }
 .user-card .username-left .photo:before {
@@ -715,7 +735,7 @@ td .photo{
     width: 70%;
 }
 .user-card .info {
-	width: 100%;
+	width: 250px;
 	margin: 0;
 	padding: 10px 20px 20px 20px;
 }
@@ -1433,6 +1453,12 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
 .dropdown{
 	display: none;
 }
+.left-side-collapsed .sidebar-collapse ul li a span{
+   display: none;
+}
+.left-side-collapsed .user-card .info p {
+display: none;
+}
 /* RESPONSIVE */
 @media (max-width: 1400px ){
 .tile .counter {
@@ -1519,7 +1545,7 @@ max-width: 100%;
 }
 @media (max-width: 840px ){
 		#page-wrapper {
-    margin-top: 100px;
+    margin-top: 52;
 }
 .panel-default>.panel-heading .bluebtn{
 max-width: 100%;
@@ -1528,10 +1554,76 @@ max-width: 100%;
 
 @media (max-width: 769px ){
 	#sidebar {
-    top: 103Px;
+    top: 55px;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.08);
+}
+.navbar-header .top-logo img {
+    width: 100%;
+    height: auto;
+    max-width: 360px;
+    min-width: 100px;
+}
+.username {
+    float: right;
+}
+.navbar-static-side {
+  transition: 0.2s all ease-in-out ;
+}
+.left-side-collapsed #sidebar{
+	left: 0px;
+	    width: 250px;
+    overflow: hidden;
+}
+.left-side-collapsed .navbar-static-side {
+     width:250px;
+}
+.left-side-collapsed .navbar-static-side ul#side-menu li, .left-side-collapsed .navbar-static-side ul#side-menu li a {
+    height: inherit;
+    overflow: inherit;
+}
+.left-side-collapsed .navbar-static-side ul#side-menu li a i.fa {
+    font-size: 16px;
+}
+
+.left-side-collapsed .navbar-static-side ul#side-menu li a span {
+   display: block;
+}
+.left-side-collapsed .navbar-static-side ul#side-menu li a span.menu-title, .user-type.menu-title {
+    position: absolute;
+    top: 0;
+    left: 35px;
+    padding: 15px;
+    margin-left: 0;
+    width: 195px;
+    height: 50px;
+    background: none;
+    outline: none;
+}
+.left-side-collapsed .navbar-static-side ul#side-menu li a i.fa-desktop:before {
+    content: "\f108";
+}
+.left-side-collapsed .user-card .info p {
+display: block;
+}
+.sidebar-colors .sidebar-collapse{
+   display: none;
+}
+ ul#side-menu li a span.menu-title .fa-bars {
+display: none;
+}
+
+.sidebar-colors #sidebar{
+	    width: 0;
+    overflow: hidden;
+}
+.navbar-static-side {
+    z-index: 1;
+    position: fixed;
+    width: 250px;
 }
 	#page-wrapper {
-    margin-top: 105px;
+    margin-top: 55px;
+    margin-left: 0;
 }
 	.dropdown{
 	display: block;
@@ -1546,7 +1638,9 @@ max-width: 100%;
     width: 95%;
     margin: 30px auto;
 }
-
+.sidebar-hid{
+	display: none;
+}
 .main {
 	margin-left:0;
 	padding-right: 20px;
@@ -1561,14 +1655,14 @@ max-width: 100%;
 	position: inherit;
 }
 .navbar-header{
-	margin-right: 0%!important;
-	margin-left: 0%!important;
-	max-width: 100%;
+	width: 45%;
+	padding-top: 5px;
+	
 }
 .navbar-header .top-logo {
     height: 50px;
     margin: 0;
-    padding: 8px 10px 0 10px;
+    padding: 14px 10px 0 10px;
     border-right: none;
 
 }
@@ -1612,14 +1706,17 @@ max-width: 100%;
     padding: 0;
     max-width: 50%;
 }
+.mobile-menu{
+	float: left;
+}
 .panel-default>.panel-heading .bluebtn{
 max-width: 100%;
 }
 }
 
-@media (max-width: 480px ){
+@media (max-width: 545px ){
 #page-wrapper {
-    margin-top: 158px;
+        margin-top: 108px;
 }
 		.dropdown{
 	display: block;
@@ -1647,27 +1744,24 @@ max-width: 100%;
     width: 95%;
 }
 #sidebar {
-    top: 157px;
+    top: 108px;
 }
 .top-icons {
-    float: right;
-    background: #ffffff;
-    height: 53px;
-    padding: 0;
-    max-width: 100%;
+
 }
 .username {
     float: left;
     background: #ffffff;
     height: 53px;
     width: 100%;
-    padding: 14px 0 12px 0;
+    padding: 10px 0 10px 0;
 }
 .username .username-in {
-    float: left!important;
+  
     border-right: none;
     padding-left: 20px;
-   
+    text-align: center;
+    width: 100%;
 }
 .sidebar{
 	    display: block;
@@ -1681,18 +1775,20 @@ max-width: 100%;
 .navbar-header{
 	margin-right: 0%!important;
 	margin-left: 0%!important;
-	max-width: 100%;
+	    min-width: 260px;
 }
 .navbar-header .top-logo {
-    height: 50px;
-    margin: 0;
-    padding: 8px 0px 0 10px;
-    border-right: none;
-    border-bottom: solid 1px rgba(79, 68, 98, 0.2);
+   
 
 }
-.navbar-header .top-logo {
 
+.left-side-collapsed #page-wrapper {
+    margin: 108px 0 0 0px;
+}
+.top-icons .search {
+     position: absolute;
+    right: 0;
+    top: 0;
 }
 .dashtiles{
 	width: 49%;

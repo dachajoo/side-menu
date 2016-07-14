@@ -21,7 +21,7 @@
 
     
 </head>
-<body>
+<body class="sidebar-colors">
     <div>
 
         <!--BEGIN TOPBAR-->
@@ -29,7 +29,14 @@
     <nav class="navbar navbar-fixed-top">
       <div class="container-fluid">
         <div class="row">
-          <div class="navbar-header col-md-4 col-sm-12">
+        <div class="mobile-menu top-icons">
+          	<a class="menu-toggle pull-right fa fa-bars dropdown" href="#"></a>
+           
+      
+            
+          </div>
+          <div class="navbar-header col-md-4 col-xs-6">
+           
             <div class="top-logo">
               <a  class="pull-left" href="#">
               <img class="media-object" src="images/top_logo.svg" alt="Bioclinica Trial Manager">
@@ -37,16 +44,16 @@
               </a>
             </div>
           </div>
-          <div class="col-md-2 col-sm-12 top-icons">
-          	<a data-toggle="collapse" data-target=".sidebar-collapse"  class="pull-right fa fa-bars dropdown" href="#"></a>
-            <a class="pull-right faq" href="#"></a>
-            <a class="pull-right settings" href="#"></a>
+          <div class="username">
+            <a class="pull-right username-in fa" href="#">Michael Fassbender</a>     
+          </div>
+          <div class="top-icons">
+        
+           
             <a class="pull-right search" href="#"></a>
             
           </div>
-          <div class="col-md-3 username">
-            <a class="pull-right username-in fa" href="#">Michael Fassbender</a>     
-          </div>
+          
         </div>
       </div>
     </nav>
@@ -55,22 +62,18 @@
             <!--BEGIN SIDEBAR MENU-->
             <nav id="sidebar" role="navigation" data-step="2" data-position="right" class="navbar-default navbar-static-side">
 
-            <div class="sidebar-collapse menu-scroll nav nav-sidebar col-sm-12">
+            <div class="sidebar-collapse menu-scroll nav nav-sidebar col-sm-12 w3-animate-opacity">
            
                 <ul id="side-menu" class="nav">
                     
                     <div class="clearfix"></div>
-                    <li><a class="product-title" id="menu-toggle" href="#"><i class="fa fa-desktop fa-fw">
+                    <li class="product-title"><a class=" menu-toggle" href="#"><i class="fa fa-desktop fa-fw">
                         
                     </i><span class="menu-title">Products <i class="fa fa-bars"></i></span>
                     
                     </a>
 
-                    <a class="product-title" data-toggle="collapse" data-target=".sidebar-collapse"  id="menu-toggle2" href="#"><i class="fa fa-desktop fa-fw">
-                        
-                    </i><span class="menu-title">Products <i class="fa fa-bars"></i></span>
                     
-                    </a>
 
                     <div class="clearfix"></div>
 
@@ -241,8 +244,8 @@
     <script src="script/jquery-migrate-1.2.1.min.js"></script>
     <script src="script/jquery.menu.js"></script>
     <script src="script/bootstrap.min.js"></script>
-    <script src="script/bootstrap-hover-dropdown.js"></script>
-    <script src="script/jquery.metisMenu.js"></script>
+   
+
     
 
 
