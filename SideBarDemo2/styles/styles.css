@@ -10,31 +10,34 @@
         url('fonts/glyphicons-halflings-regular.eot'),
         url('fonts/glyphicons-halflings-regular.ttf');
 }
+html {
+    overflow: auto;
+}
 /* Let's get this party started */
+
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 5px;
+    margin-left: -5px;
 }
  
 /* Track */
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.1); 
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-    background: rgba(255,255,255,1); 
-
+   
+    -webkit-border-radius: 10px;
+    border-radius:0px;
+    background-color: #f0f2f5;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	 border:solid 2px #fff;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-
-    background: rgba(0,0,0,0.1); 
-    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.1); 
+    background: #e0e0e0; 
+    height: 20px;
+   
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(0,0,0,0.1); 
+	background: rgba(0,0,0,0.5); 
 }
 .disabled{
 	opacity: 0.3;
@@ -54,6 +57,8 @@
 body {
 	font-family: open_sansregular, Arial, sans-serif;
 	color: #4e5861;
+	    overflow-y: scroll;
+    overflow-x: hidden;
 	}
 a{
 	color:#0c9ed3;
@@ -817,7 +822,6 @@ background: -1px -1px url(images/sponsors-icon.png) #ffffff;
 	bottom: 30px;
 	left: 0;
 	margin-left: 250px;
-	overflow-y:scroll;
 	
 }
 
@@ -1572,7 +1576,7 @@ max-width: 100%;
 .left-side-collapsed #sidebar{
 	position: fixed;
     width: 250px;
-    overflow-y: scroll;
+
     top: 55px;
     bottom: 0;
 }

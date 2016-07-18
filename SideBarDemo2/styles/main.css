@@ -168,6 +168,7 @@ hr {
 #sidebar {
   background: #ffffff;
   top: 55px;
+  overflow: auto;
 }
 .navbar-static-side {
   transition: 0.6s all ease ;
@@ -494,7 +495,8 @@ overflow: hidden;
     position: fixed;
     width: 250px;
     bottom: 0;
-    overflow: scroll;
+    overflow: hidden;
+    max-height: 600px;
   }
 
 
