@@ -1570,9 +1570,11 @@ max-width: 100%;
   transition: 0.2s all ease-in-out ;
 }
 .left-side-collapsed #sidebar{
-	left: 0px;
-	    width: 250px;
-    overflow: hidden;
+	position: fixed;
+    width: 250px;
+    overflow-y: scroll;
+    top: 55px;
+    bottom: 0;
 }
 .left-side-collapsed .navbar-static-side {
      width:250px;
