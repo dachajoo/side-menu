@@ -387,7 +387,7 @@ button:active{
     padding-right: 27px;
     padding-top: 5px;
     font-family: inherit;
-    border-right: solid 1px rgba(79, 68, 98, 0.2);
+  
 }
 .username .username-in:hover {
     color: #0c9ed3;
