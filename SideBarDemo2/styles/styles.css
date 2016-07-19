@@ -1577,7 +1577,7 @@ max-width: 100%;
 	position: fixed;
     width: 250px;
 
-    top: 110px;
+    top: 55px;
     bottom: 0;
 }
 .left-side-collapsed .navbar-static-side {
@@ -1749,8 +1749,13 @@ max-width: 100%;
 .navbar-header .top-logo .pull-left {
     width: 95%;
 }
+.left-side-collapsed #sidebar{
+
+    top: 110px;
+
+}
 #sidebar {
-    top: 108px;
+    top: 110px;
 }
 .top-icons {
 
