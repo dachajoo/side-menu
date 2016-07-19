@@ -1268,7 +1268,7 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
 }
 .table-cont{
 	padding: 0px 15px 15px 15px;
-	overflow-x:scroll;
+	overflow-x:auto;
 }
 
 .paginator-table{
