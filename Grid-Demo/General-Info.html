@@ -309,10 +309,163 @@
              <div class="clearfix"></div>
 
         
-                
-                <!--BEGIN FOOTER-->
               
-                <!--END FOOTER-->
+            </div>
+
+            <div class="jumbotron">
+              <div class="panel panel-default">
+
+                <div class="col-md-12 no-gutter panel-heading">
+                    <h3 class="col-md-9">General Info</h3>
+                    <div class="col-md-3 col-sm-12 col-xs-12 no-gutter right-button">
+                      <a class="expand-arrow collapsed" href="#collapseExample2" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" >
+                        
+                      </a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                      <div class="col-md-12  table-cont">
+
+
+<div class="collapse" id="collapseExample2">
+  <div class="well">
+  <table class="table table-condensed" style="border-collapse:collapse;">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Credit</th>
+            <th>Debit</th>
+            <th>Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr data-toggle="collapse" data-target="#demo4">
+            <td>2</td>
+            <td>05 May 2013</td>
+            <td>Credit Account</td>
+            <td class="text-success">$11.00</td>
+            <td class="text-error"></td>
+            <td class="text-success">$161.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" class="hiddenRow">
+                <div id="demo4" class="collapse"><div id="grid4"></div>
+                      <div class="clearfix">
+
+
+                      <script>
+                      var mockdata = [ {sponsorname:"SponsorName", sponsorcode:"1234556778990",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"},
+                                        {sponsorname:"SponsorName", sponsorcode:"1234556778991",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"},
+                                        {sponsorname:"SponsorName", sponsorcode:"1234556778992",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"},
+                                        {sponsorname:"SponsorName", sponsorcode:"1234556778993",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"},
+                                        {sponsorname:"SponsorName", sponsorcode:"1234556778994",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"},
+                                        {sponsorname:"SponsorName", sponsorcode:"1234556778995",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"},
+                                        {sponsorname:"SponsorName", sponsorcode:"1234556778996",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"}
+
+
+
+                      ];
+
+                      $("#grid4").kendoGrid({
+                        columns: [ {title: "Sponsor",field:"sponsorname",template:"<a class='first-cell' href=''> #= sponsorname #</a>", width:170},
+                                   {title: "SponsorCode",field:"sponsorcode",template:"<div class='second-cell'> #= sponsorcode #</div>", width:170},
+                                   {title: "Versions",field:"versions",template:"<a class='sum' href=''> #= versions #</a>", width:120},
+                                   {title: "Env.",field:"env",template:"<a class='sum' href=''> #= env #</a>", width:120},
+                                   {title: "Customers",field:"customers",template:"<a class='sum' href=''> #= customers #</a>", filterable:false, width:120},
+                                   {title: "CROs",field:"cros",template:"<a class='sum' href=''> #= cros #</a>", filterable:false, width:120},
+                                   {title: "Studies",field:"studies",template:"<a class='sum' href=''> #= studies #</a>", filterable:false, width:120},
+                                   {title: "Sites",field:"sites",template:"<a class='sum' href=''> #= sites #</a>", filterable:false, width:120},
+                                   {title: "Users",field:"users",template:"<a class='sum' href=''> #= users #</a>", filterable:false, width:120}
+                         ],
+                      scrollable:true,
+                      sortable: true,
+                      filterable: { mode: "row"},
+
+                        dataSource: {
+                          data: mockdata
+                        }
+                      }
+                      );
+                      </script></div>
+            </td>
+        </tr>
+        <tr data-toggle="collapse" data-target="#demo5">
+            <td>3</td>
+            <td>05 May 2013</td>
+            <td>Credit Account</td>
+            <td class="text-success">$500.00</td>
+            <td class="text-error"></td>
+            <td class="text-success">$661.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" class="hiddenRow">
+                <div id="demo5" class="collapse">
+                  <div id="grid5"></div>
+                      <div class="clearfix">
+
+
+                      <script>
+                      var mockdata = [ {sponsorname:"SponsorName", sponsorcode:"1234556778990",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"},
+                                        {sponsorname:"SponsorName", sponsorcode:"1234556778991",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"},
+                                        {sponsorname:"SponsorName", sponsorcode:"1234556778992",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"},
+                                        {sponsorname:"SponsorName", sponsorcode:"1234556778993",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"},
+                                        {sponsorname:"SponsorName", sponsorcode:"1234556778994",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"},
+                                        {sponsorname:"SponsorName", sponsorcode:"1234556778995",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"},
+                                        {sponsorname:"SponsorName", sponsorcode:"1234556778996",versions:"2", env:"3", customers:"34", cros:"2", studies:"45", sites:"34", users:"345"}
+
+
+
+                      ];
+
+                      $("#grid5").kendoGrid({
+                        columns: [ {title: "Sponsor",field:"sponsorname",template:"<a class='first-cell' href=''> #= sponsorname #</a>", width:170},
+                                   {title: "SponsorCode",field:"sponsorcode",template:"<div class='second-cell'> #= sponsorcode #</div>", width:170},
+                                   {title: "Versions",field:"versions",template:"<a class='sum' href=''> #= versions #</a>", width:120},
+                                   {title: "Env.",field:"env",template:"<a class='sum' href=''> #= env #</a>", width:120},
+                                   {title: "Customers",field:"customers",template:"<a class='sum' href=''> #= customers #</a>", filterable:false, width:120},
+                                   {title: "CROs",field:"cros",template:"<a class='sum' href=''> #= cros #</a>", filterable:false, width:120},
+                                   {title: "Studies",field:"studies",template:"<a class='sum' href=''> #= studies #</a>", filterable:false, width:120},
+                                   {title: "Sites",field:"sites",template:"<a class='sum' href=''> #= sites #</a>", filterable:false, width:120},
+                                   {title: "Users",field:"users",template:"<a class='sum' href=''> #= users #</a>", filterable:false, width:120}
+                         ],
+                      scrollable:true,
+                      sortable: true,
+                      filterable: { mode: "row"},
+
+                        dataSource: {
+                          data: mockdata
+                        }
+                      }
+                      );
+                      </script>
+
+
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+    
+    
+
+  </div>
+</div>
+
+                     
+
+<div class="clearfix"></div>
+
+                  
+              </div>
+              <div class="clearfix"></div>
+             </div>
+             <div class="clearfix"></div>
+
+        
+              
             </div>
             <!--END PAGE WRAPPER-->
         </div>
