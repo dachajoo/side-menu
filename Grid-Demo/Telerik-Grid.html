@@ -30,6 +30,7 @@
     <link type="text/css" rel="stylesheet" href="styles/main.css">
     <link type="text/css" rel="stylesheet" href="styles/style-responsive.css">
     <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    <link type="text/css" rel="stylesheet" href="styles/linear.css">
 
 
     
@@ -38,6 +39,9 @@
     <div>
 
         <!--BEGIN TOPBAR-->
+        <nav class="navbar-fixed-bottom">
+  <div class="container-fluid"><div class="col-md-6 no-gutter"><p>© 2016 BIOCLINICA - Trial Manager</p></div><div class"col-md-6 no-gutter"><p class="versions">Version 1.0</p></div></div>
+</nav>
       <!-- FOOTER -->
     <nav class="navbar navbar-fixed-top">
       <div class="container-fluid">
@@ -57,13 +61,16 @@
               </a>
             </div>
           </div>
+
           <div class="username">
             <a class="pull-right username-in fa" href="#">Michael Fassbender</a>     
           </div>
-          <div class="top-icons">
+          <div class="left-line"></div>
+          <div class="top-icons col-md-5 col-xs-12 ">
         
-           
-            <a class="pull-right search" href="#"></a>
+           <div class="grid-icon"><a class="pull-right icon-apps" href="#"></a></div>     
+
+           <div class="search-bar"><span class="lnr lnr-magnifier"></span><input class="search-input col-md-12 no-gutter"></input></div>
             
           </div>
           
@@ -80,9 +87,9 @@
                 <ul id="side-menu" class="nav">
                     
                     <div class="clearfix"></div>
-                    <li class="product-title"><a class=" menu-toggle" href="#"><i class="fa fa-desktop fa-fw">
+                    <li class="product-title"><a class=" menu-toggle" href="#"><i class="lnr lnr-screen">
                         
-                    </i><span class="menu-title">Products <i class="fa fa-bars"></i></span>
+                    </i><span class="menu-title">Product<i class="lnr lnr-menu"></i></span>
                     
                     </a>
 
@@ -92,14 +99,14 @@
 
                     <div class="user-card">
                          <div class="username-left">
-                             <div class="fa photo"></div>
-                             <label>Admin</label>
+                             <div class="lnr photo"></div>
+                             <label>Express</label>
                              <div class="clearfix"></div>    
                          </div>
                         <div class="info col-sm-3 col-md-2">
-                        <p>Michael J. Fassbender, Sr</p>
-                        <a href="mailto:mfassbender@bioclinica.com">mfassbender@bioclinica.com</a>
-                        <p>+123 2344 2345</p>
+                          <div class="col-md-12 no-gutter"><label>Project Manager:</label><p> Lynn Fraser</p></div>
+                        <div class="col-md-12 no-gutter"><label>Contact:</label><a href="mailto:mfassbender@bioclinica.com"> express@bioclinica.com</a></div>
+                        <div class="col-md-12 no-gutter"><label>Versions:</label><p> 5.2, 5.3, 5.4</p></div>
                         <div class="clearfix"></div>    
 
                         </div>
@@ -111,42 +118,32 @@
                     
 
 
-                     <li><a href="#"><i class="fa fa-book fa-fw">
+                     <li><a href="#"><i class="lnr lnr-book">
                         <div class="icon-bg bg-green"></div>
                     </i><span class="menu-title">General Information</span></a>
                        
                     </li>
-                    <li><a href="#"><i class="fa fa-laptop fa-fw">
+                    <li><a href="#"><i class="lnr lnr-laptop">
                         <div class="icon-bg bg-violet"></div>
-                    </i><span class="menu-title">Products</span></a>
+                    </i><span class="menu-title">Versions</span></a>
                       
                     </li>
-                    <li><a href="#"><i class="fa fa-building-o fa-fw">
+                    <li class="active"><a href="#"><i class="lnr lnr-diamond">
                         <div class="icon-bg bg-blue"></div>
-                    </i><span class="menu-title">Customers</span></a>
+                    </i><span class="menu-title">Sponsors</span></a>
                           
                     </li>
-                    <li><a href="#"><i class="fa fa-eraser fa-fw">
+                    <li><a href="#"><i class="lnr lnr-heart-pulse">
                         <div class="icon-bg bg-red"></div>
-                    </i><span class="menu-title">CRO's</span></a>
-                      
-                    </li>
-                    <li class="active"><a href="#"><i class="fa fa-star fa-fw">
-                        <div class="icon-bg bg-yellow"></div>
-                    </i><span class="menu-title">Sponsors</span></a>
-                       
-                    </li>
-                    <li><a href="#"><i class="fa fa-heart fa-fw">
-                        <div class="icon-bg bg-grey"></div>
                     </i><span class="menu-title">Studies</span></a>
                       
                     </li>
-                    <li><a href="#"><i class="fa fa-map-marker fa-fw">
-                        <div class="icon-bg bg-dark"></div>
+                    <li><a href="#"><i class="lnr lnr-map-marker">
+                        <div class="icon-bg bg-yellow"></div>
                     </i><span class="menu-title">Sites</span></a>
-                      
+                       
                     </li>
-                    <li><a href="#"><i class="fa fa-users">
+                    <li><a href="#"><i class="lnr lnr-user">
                         <div class="icon-bg bg-primary"></div>
                     </i><span class="menu-title">Users</span></a>
                       
@@ -165,7 +162,7 @@
                 <div class="col-md-12 no-gutter panel-heading">
                     <h3 class="col-md-9">Sponsors</h3>
                     <div class="col-md-3 col-sm-12 col-xs-12 no-gutter right-button">
-                      <button data-toggle="modal" data-target="#addUser" class="col-md-12 col-sm-12 col-xs-12 no-gutter savebtn bluebtn">+Add New User</button>
+                      <button data-toggle="modal" data-target="#addUser" class="col-md-7 col-sm-12 col-xs-12 no-gutter savebtn bluebtn"><span class="icon-add"></span> Add Sponsor</button>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -193,11 +190,11 @@
                                    {title: "SponsorCode",field:"sponsorcode",template:"<div class='second-cell'> #= sponsorcode #</div>", width:170},
                                    {title: "Versions",field:"versions",template:"<a class='sum' href=''> #= versions #</a>", width:120},
                                    {title: "Env.",field:"env",template:"<a class='sum' href=''> #= env #</a>", width:120},
-                                   {title: "Customers",field:"customers",template:"<a class='sum' href=''> #= customers #</a>", width:120},
-                                   {title: "CROs",field:"cros",template:"<a class='sum' href=''> #= cros #</a>", width:120},
-                                   {title: "Studies",field:"studies",template:"<a class='sum' href=''> #= studies #</a>", width:120},
-                                   {title: "Sites",field:"sites",template:"<a class='sum' href=''> #= sites #</a>", width:120},
-                                   {title: "Users",field:"users",template:"<a class='sum' href=''> #= users #</a>", width:120}
+                                   {title: "Customers",field:"customers",template:"<a class='sum' href=''> #= customers #</a>", filterable:false, width:120},
+                                   {title: "CROs",field:"cros",template:"<a class='sum' href=''> #= cros #</a>", filterable:false, width:120},
+                                   {title: "Studies",field:"studies",template:"<a class='sum' href=''> #= studies #</a>", filterable:false, width:120},
+                                   {title: "Sites",field:"sites",template:"<a class='sum' href=''> #= sites #</a>", filterable:false, width:120},
+                                   {title: "Users",field:"users",template:"<a class='sum' href=''> #= users #</a>", filterable:false, width:120}
                          ],
                       scrollable:true,
                       sortable: true,

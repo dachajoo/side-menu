@@ -168,7 +168,8 @@ hr {
 #sidebar {
   background: #ffffff;
   top: 55px;
-  overflow: auto;
+  overflow-y: auto;
+  border-right: 1px solid #d9dcde;
 }
 .navbar-static-side {
   transition: 0.6s all ease ;
@@ -209,9 +210,9 @@ hr {
 }
 
 .navbar-static-side ul li a {
-  color: #41484e;
-  padding: 15px;
-  display: block!important;
+  color: #4f5861;
+  padding: 9px 10px 10px 20px;
+  display: flex;
       width: 250px;
 }
 #menu-toggle2{
@@ -220,14 +221,19 @@ hr {
 .navbar-static-side ul li.active a {
   outline: none;
   border-left: solid 5px #0c9ed3;
-  padding-left: 12px;
+  padding-left: 14px;
 }
 .navbar-static-side ul li a span.menu-title {
-  margin-left: 10px;
+  margin: 2px 0px 0px 10px;
+}
+.navbar-static-side ul .product-title a span.menu-title {
+  font-weight: normal;
+  width: 100%;
 }
 .navbar-static-side ul li a i {
-  font-size: 16px;
+  font-size: 20px;
   color: #0c9ed3;
+      padding-top: 1px;
 }
 .navbar-static-side ul li a i .icon-bg {
   display: none;
@@ -418,6 +424,7 @@ hr {
 }
 .left-side-collapsed .navbar-static-side ul#side-menu li.nav-hover a {
   height: 50px;
+  cursor: pointer;
 }
 .left-side-collapsed .navbar-static-side ul#side-menu li.nav-hover a span.menu-title {
   display: block !important;
@@ -444,7 +451,17 @@ overflow: hidden;
 .left-side-collapsed .navbar-static-side ul#side-menu li a{
   height: 50px;
 overflow: hidden;
+padding-left: 11px;
 
+}
+.left-side-collapsed .navbar-static-side ul#side-menu li a:hover {
+    padding-left: 6px;
+}
+.left-side-collapsed .navbar-static-side ul#side-menu .active a:hover {
+    padding-left: 11px;
+}
+.left-side-collapsed .navbar-static-side ul#side-menu .product-title a:hover {
+    padding-left: 11px;
 }
 .left-side-collapsed .navbar-static-side ul#side-menu li a span {
   display: none;
@@ -454,6 +471,14 @@ overflow: hidden;
 }
 .left-side-collapsed .navbar-static-side ul#side-menu li a i.fa{
   font-size: 22px;
+}
+.left-side-collapsed .navbar-static-side ul#side-menu li a i.lnr{
+  font-size: 25px;
+  padding-left: 3px;
+}
+.left-side-collapsed .navbar-static-side ul#side-menu .active a i.lnr{
+  padding: 0
+
 }
 .left-side-collapsed .navbar-static-side ul#side-menu li a i.fa-desktop:before {
   content: "\f0c9";
@@ -531,10 +556,14 @@ overflow: hidden;
 .k-animation-container, .k-animation-container *, .k-animation-container :after, .k-block .k-header, .k-list-container, .k-widget, .k-widget *, .k-widget :before {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    border-right: none;
-    border-left: none;
+    /*border-right: none;
+    border-left: none;*/
 }
 
+.k-filtercell{
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+}
 .k-grid-header .k-header, 
 .k-grid-header .k-header .k-link, 
 .k-grid-header .k-link, 
@@ -550,6 +579,7 @@ overflow: hidden;
 }
 div.k-grid-footer, div.k-grid-header {
   padding-right: 0!important;
+      border-bottom-width: 0px;
     
 }
 
@@ -558,14 +588,15 @@ div.k-grid-footer, div.k-grid-header {
 
 }
 .k-filter-row th {
-    padding: 0;
+      background: #fafafa;
+    
 }
 .k-filter-row .k-dropdown-operator, .k-filtercell>span>.k-button {
     position: absolute;
     top: 0px;
     right: 31px;
     box-shadow: none;
-    background-color: #fff;
+    background-color: transparent;
 }
 .k-grid-header .k-header{
   right: 0;
@@ -577,8 +608,27 @@ div.k-grid-footer, div.k-grid-header {
 .k-filtercell>span>.k-button {
     background-color: transparent;
     top: -3px;
+        right: 25px;
+    border: none;
 }
+.k-autocomplete.k-state-focused,
+.k-picker-wrap.k-state-focused,
+.k-numeric-wrap.k-state-focused,
+.k-dropdown-wrap.k-state-focused,
+.k-multiselect.k-header.k-state-focused {
 
+  -webkit-box-shadow:none;
+          box-shadow:none;
+}
+.k-autocomplete.k-state-hover,
+.k-picker-wrap.k-state-hover,
+.k-numeric-wrap.k-state-hover,
+.k-dropdown-wrap.k-state-hover,
+.k-multiselect.k-header.k-state-hover {
+
+  -webkit-box-shadow:none;
+          box-shadow:none;
+}
 .k-grid tr:hover {
     background-image:none;
 }
@@ -593,50 +643,66 @@ background-color: #ffffff;
   box-shadow: none;
 }
 .k-grid-header th.k-header {
-    background-color: #f5f7f8;
+    background-color: #fafafa;
     font-size: 13px;
-    font-family: opensans-bold;
+    height: 27px;
+    vertical-align: middle;
+    font-weight: bold;
+    font-family: 'open_sans';
+    color: #4f5861;
 }
 .k-grid td{
   font-size: 13px;
   padding: 0;
+  border-color: #e7eaec;
+  border-top:solid 1px #e7eaec;
 }
 .k-grid td a{
-  padding: 10px 0;
-  color: #099cdc;
+  padding: 15px;
+ 
 }
 .k-grid td a:hover{
-  font-family: 'opensans-bold';
+  font-family: 'open_sans';
+  font-weight: bold;
+
 }
 .k-grid .k-alt {
     background-color: #f9fafb;
 }
 .k-grid tr {
     background-color: #ffffff;
-    border-top: 1px solid #e7eaec;
+   
 }
 .k-grid td .sum{
   display: block;
   width: 100%;
   text-decoration: none;
-  text-align: center;
-}
 
+}
+.k-autocomplete .k-input{
+  box-shadow: none;
+  cursor: text;
+  padding-left: 0px!important;
+
+}
 .k-grid td .first-cell{
   padding-left: 10px;
   text-decoration: none;
-  color: #454545;
+  color:#2dade3;
 
 }
 .k-grid td .first-cell:hover{
-  color: #099cdc;
+  color:#2dade3;
+  font-family: 'open_sans'
+  font-weight:bold;
 }
 .k-grid td .second-cell{
   padding-left: 10px;
 
 }
 .k-dropdown .k-state-default {
-    background-color: #ffffff;
+    background-color: transparent;
+    border: none;
 }
 
  .k-autocomplete{
@@ -645,4 +711,24 @@ background-color: #ffffff;
     border: none;
  }
 
+.k-popup .k-list .k-item {
+    color: #444444;
+}
+.k-flatcolorpicker.k-group, .k-group, .k-menu, .k-menu .k-group, .k-popup.k-widget.k-context-menu {
+    color: #fff;
+    background-color: #fff;
+}
+.k-grid thead{
+	border: none;
+}
 
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}

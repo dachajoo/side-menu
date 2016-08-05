@@ -1,15 +1,10 @@
 @import 'fonts.css';
 @import 'tgl.css';
 @import 'w3.css';
+@import 'linear.css';
+@import 'icomoon.css';
 
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src:  url('fonts/glyphicons-halflings-regular.woff2'),
-        url('fonts/glyphicons-halflings-regular.woff'),
-        url('fonts/glyphicons-halflings-regular.svg'),
-        url('fonts/glyphicons-halflings-regular.eot'),
-        url('fonts/glyphicons-halflings-regular.ttf');
-}
+
 html {
     overflow: auto;
 }
@@ -56,10 +51,11 @@ html {
 
 
 body {
-	font-family: open_sansregular, Arial, sans-serif;
+	font-family: 'open_sans', Arial, sans-serif;
 	color: #4e5861;
 	    overflow-y: scroll;
     overflow-x: hidden;
+    background: #f0f2f5;
 	}
 a{
 	color:#0c9ed3;
@@ -316,20 +312,22 @@ button:active{
 }
 
 .navbar-fixed-bottom{
-	height: 35px;
-	background-color: #333D47;
+	height: 40px;
+	background-color: #e2e5e8;
 	position: fixed;
 	bottom: 0;
+	left: 250px;
+	padding-right: 20px;
 }
 .navbar-fixed-bottom p{
-	text-align: center;
-	padding-top: 10px;
-	color: #48add9;
+	text-align: left;
+	padding-top: 12px;
+	color: #7a8085;
 	font-size: 12px;
+	padding-left: 30px;
 }
-.navbar-fixed-bottom p span{
-	color: #ffffff;
-
+.navbar-fixed-bottom  .versions{
+	text-align: right;
 }
 
 .navbar-fixed-top {
@@ -366,7 +364,13 @@ button:active{
 	background: #ffffff;
 	height: 53px;
     padding: 14px 0 12px 0;
+    width: auto;
     
+
+}
+.username:hover{
+	background: #f0f0f0;
+	  
 
 }
 .username img{
@@ -382,34 +386,99 @@ button:active{
 }
 .username .username-in {
     height: 100%;
-    color: #333d47;
-    font-size: 14px;
+    color: #b0b7bc;
+    font-size: 13px;
     display: block;
-    padding-right: 27px;
-    padding-top: 5px;
+    padding-right: 35px;
+    padding-top: 9px;
+    padding-left: 43px;
     font-family: inherit;
     border:none!important; 
+    line-height: 7px;
+    position: relative;
   
 }
 .username .username-in:hover {
     color: #0c9ed3;
-    background-color: #fff;
     text-decoration: none;
+    background-color: #f0f0f0;
     
 }
 .username .username-in:before{
-    content: "\f007" ;
-    font-family: FontAwesome;
+    content: "\e7fd" ;
+    font-family: 'icomoon';
     margin-right: 10px;
-    color: #0c9ed3;
+    color: #b0b7bc;
+    font-size: 20px;
+    left: 13px;
+    top: 7px;
+    position: absolute;
+}
+.username .username-in:after{
+    content: "\e313";
+    font-family: 'icomoon';
+    margin-right: 10px;
+    color: #2dade3;
+    font-size: 20px;
+    right: -2px;
+    top: 10px;
+    position: absolute;
+}
+.left-line{
+	height: 30px;
+	width: 1px;
+	margin-top: 10px;
+	float: right;
+	background-color: #e0e0e0;
+}
+.grid-icon{
+	height: 55px; 
+	float: right;
+	width: 50px;
+}
+.grid-icon a {
+	font-size: 24px;
+    padding-right: 5px;
+    display: block;
+    margin: 0px auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 14px;
+    color: #2dade3;
 
+}
+.grid-icon a:hover {
+text-decoration: none;
+
+}
+.search-bar{
+	height: 55px; 
+	float: right;
+	width: 50%;
+	padding: 13px 0;
+	position: relative;
+}
+.search-input{
+	width: 100%;
+	height: 100%;
+	background-color: #eceef0;
+	border-radius: 50px;
+	border: none;
+	position: relative;
+	padding-left: 30px!important;
+}
+.search-bar span{
+position: absolute;
+color: #b0b7bc;
+left: 10px;
+top:20px;
+z-index: 999999;
 }
 .top-icons{
 	float: right;
 	background: #ffffff;
 	height: 53px;
 	padding: 0;
-	max-width: 160px;
 }
 .top-icons a:hover{
 	background-color:#ffffff;
@@ -484,12 +553,12 @@ button:active{
 /* SIDEBAR */
 .nav>li>a {
      padding: 0;
-     height: 50px;
-     font-size: 14px;
+     height: 40px;
+     font-size: 13px;
      width: 100%;
      display: block;
-     color: #4f5862;
-	font-weight: normal;
+     color: #4f5861;
+	font-weight: bold;
 	background-color: #ffffff;
 
      
@@ -532,8 +601,7 @@ button:active{
 		color:#0c9ed3;
 		background-color: #fff;
 		border-left: solid 5px #0c9ed3;
-		padding-left: 10px;
-
+		padding-left: 15px;
 }
 
 .nav li .product-title{
@@ -548,6 +616,11 @@ button:active{
 		background-color: #e0c450!important;
 	
 }
+.navbar-static-side ul .product-title a:hover{
+		border-left: none;
+		padding-left: 20px;
+	
+}
 .navbar-static-side ul .product-title a{
 		background-color:transparent;
 		color: #ffffff;
@@ -559,6 +632,16 @@ button:active{
 .navbar-static-side ul .product-title i{
 		background-color:transparent;
 		color: #ffffff;
+		display: block;
+    	float: left;
+}
+.navbar-static-side ul .product-title i.lnr-menu{
+		background-color:transparent;
+		color: #ffffff;
+	    font-size: 27px;
+    top: 4px;
+    position: absolute;
+    right: 10px;
 }
 .nav li .product-title:focus{
 		background-color: #e0c450!important;
@@ -695,13 +778,16 @@ width: initial;
 }
 .navbar-static-side ul .product-title .info a{
 	color: inherit;
+	width: auto;
+	color: #0c9ed3;
 	
 }
+
 .user-card .username-left .photo:before {
     font-size: 20px;
     position: absolute;
     top: 11px;
-    left: 13px;
+    left: 11px;
     color: rgba(0, 0, 0, 0.2);
 }
 .photo{
@@ -716,7 +802,7 @@ width: initial;
 	position: relative;
 }
 .photo:before {
-    content: "\f007";
+    content: "\e827";
 }
 .photo img{
 	height: 44px;
@@ -731,52 +817,67 @@ td .photo{
 .user-card label {
     color: #4f5862;
     line-height: 18px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    margin: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 0px;
     display: flex;
     align-items: center;
     min-height: 40px;
     float: left;
-    height: auto;
-    width: 70%;
+
+
+ 
+}
+.username-left label{
+	padding-top: 2px;
+	padding-left: 10px;
+
 }
 .user-card .info {
 	width: 250px;
 	margin: 0;
-	padding: 10px 20px 20px 20px;
+	padding: 10px 20px 10px 20px;
+}
+.user-card .info  div{
+	margin-bottom: 6px
 }
 .user-card .info label{
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: bold;
 	float: left;
-	display: block;
-	min-height: inherit;
-	height: inherit;
-	width: auto;
+	display: inline;
+	min-height: auto;
+	padding-right: 5px;
+	padding-left: 0px;
 }
 .user-card .info p{
-	width: 100%;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: normal;
 	float: left;
-	display: block;
+	display: inline;
 	margin-bottom: 0;
-	    line-height: 25px;
+	    line-height: initial;
 }
 .user-card .info a{
 	width: 100%;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: normal;
 	float: left;
 	padding:0;
-	display: block;
+	display: inline;
+}
+.user-card .info a:hover{
+	padding:0;
 }
 .sidemenu{
 	width: 100%;
 	clear: both;
 	padding: 20px 0 0 0;
 	
+}
+.navbar-static-side ul .product-title .info a:hover{
+	padding-left: 0;
+	margin:0;
 }
 /*PRODUCT PAGES*/
 
@@ -841,27 +942,39 @@ background: -1px -1px url(images/sponsors-icon.png) #ffffff;
 }
 .panel-default>.panel-heading h3{
 	margin: 0;
-	padding: 15px 15px 20px 15px;
-	font-family: 'open_sansbold'
+	padding: 20px;
+	font-family: 'open_sans';
+	font-weight:normal;
 
 }
 .panel-default>.panel-heading h3:before{
-	font-family: FontAwesome;
-	content:"\f007" ;
+	font-family: 'Linearicons-Free';
+	content:"\e845";
 	margin-right: 7px;
 	color: #0c9ed3;
 
 
 }
 .panel-default>.panel-heading .right-button{
-	padding: 15px;
-
-
+	padding: 20px;
 }
 .panel-default>.panel-heading .bluebtn{
 margin-left: 0;
 float: right;
-max-width: 150px;
+background-color: #2dade3;
+font-size: 13px;
+text-align: right;
+padding-right: 20px;
+width: 130px;
+
+
+}
+.panel-default>.panel-heading .bluebtn span{
+
+font-size: 18px;
+position: absolute;
+left: 15px;
+top: 6px;
 
 
 }
@@ -1269,7 +1382,7 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
     border:none;
 }
 .table-cont{
-	padding: 0px 15px 15px 15px;
+	padding: 0px 20px 20px 20px;
 	overflow-x:auto;
 }
 
@@ -1712,7 +1825,6 @@ display: none;
     background: #ffffff;
     height: 53px;
     padding: 0;
-    max-width: 50%;
 }
 .mobile-menu{
 	float: left;
@@ -1723,6 +1835,9 @@ max-width: 100%;
 }
 
 @media (max-width: 545px ){
+	.left-line {
+display: none;
+}
 #page-wrapper {
         margin-top: 108px;
 }
@@ -1738,6 +1853,11 @@ max-width: 100%;
 .custom-modal{
     width: 95%;
     margin: 30px auto;
+}
+.search-bar {
+
+    width: 77%;
+
 }
 .main {
 	margin-left:0;
