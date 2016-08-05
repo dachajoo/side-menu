@@ -1327,7 +1327,6 @@ border-bottom: 2px solid #dee1e4;
 .table>thead>tr>th {
 cursor: pointer;
 font-size: 14px;
-font-family: 'open_sansbold';
 padding: 7px 25px 7px 10px;
 
 }
@@ -1344,6 +1343,7 @@ position: relative;
 }
 tr {
 	background-color: #f9fafb;
+	cursor: pointer;
 }
 .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
     background-color: #FFFFFF;

@@ -732,3 +732,37 @@ background-color: #ffffff;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+.hiddenRow {
+    padding: 0 !important;
+}
+.expand-arrow{
+  font-size: 30px;
+  color: #cccccc;
+  display: block;
+  float: right;
+  margin: 0 20px;
+  font-family: 'Linearicons-Free';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.expand-arrow:hover{
+  text-decoration: none;
+  font-size: 30px;
+  color: #cccccc;
+  display: block;
+  float: right;
+  margin: 0 20px;
+}
+
+.expand-arrow:after{
+  content: "\e873";}
+
+.expand-arrow.collapsed:after{
+  content: "\e874"
+
+}
