@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>User - General Information</title>
+    <!-- Bootstrap core CSS -->
+       <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/kendo.common.min.css" rel="stylesheet">
+    <link href="styles/kendo.rtl.min.css" rel="stylesheet">
+    <link href="styles/kendo.default.min.css" rel="stylesheet">
+    <link href="styles/kendo.dataviz.min.css" rel="stylesheet">
+    <link href="styles/kendo.dataviz.default.min.css" rel="stylesheet">
+    <link href="styles/kendo.material.min.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/kendo.all.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">
+    <link type="text/css" rel="stylesheet" href="styles/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/main.css">
+    <link type="text/css" rel="stylesheet" href="styles/style-responsive.css">
+    <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    <link type="text/css" rel="stylesheet" href="styles/linear.css">
+ 
+  </head>
+  <body>
+    <div id="editModal" class="modal fade" role="dialog">
+      <div class="modal-dialog custom-modal">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="panel-heading">
+            <h4 class="modal-title">Edit Contact Information</h4>
+          </div>
+          <div class="modal-body">
+            <h4>Fill in the required info</h4>
+            <p>Please fill in the required information below</p>
+            <form>
+              <div class="form-group">
+                <label class="solo-label" for="Name">Name</label>
+                <div class="left_inputs col-md-6">
+                  <input type="text" class="col-md-12" id="Name" placeholder="First Name">
+                  <input type="text" class="col-md-12" id="LastName" placeholder="Last Name">
+                </div>
+                <div class="right_inputs col-md-6">
+                  <input type="text" class="col-md-12" id="MiddleName" placeholder="Middle Name">
+                  <select class="select-control col-md-12" onchange="changeMe(this)">
+                    <option selected disabled>Please Select</option>
+                    <option>No Suffix</option>
+                    <option>Sr.</option>
+                    <option>Jr.</option>
+                  </select>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="left_inputs col-md-6">
+                <label>Email</label>
+                <input type="password" class="col-md-12" id="emailAddress" placeholder="mfassbender@mail.com" disabled>
+              </div>
+              <div class="right_inputs col-md-6 has-danger">
+                <label class="errormsgtext">Phone</label>
+                <input type="password" class="col-md-12 errormsg" id="phoneNumber" placeholder="Phone Number">
+                <p class="errorp">*Please fill in the required information.</p>
+              </div>
+            </form>
+          </div>
+          <div class="clearfix"></div>
+          <div class="modal-footer">
+            <button type="submit" class="bluebtn">Save</button>
+            <button type="button" class="cancelbtn" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 01-->
+    <div id="photoModal" class="modal fade" role="dialog">
+      <div class="modal-dialog custom-modal">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="panel-heading">
+            <h4 class="modal-title">Edit Contact Information</h4>
+          </div>
+          <div class="modal-body">
+            <div class="col-md-8 left_inputs">
+              <h4>Adjust your photo</h4>
+              <p>Drag the highlighted square to change position and size </p>
+              <p class="instructions">(Photos must be at least 292px width. Larger widths will be downsized)</p>
+              <div class="image-editor"><span class="no-image">No Image Selected</span></div>
+            </div>
+            <div class="col-md-4 right_inputs">
+              <h4>Preview</h4>
+              <p>Check how your photo will look like.</p>
+              <div class="tile previewbox"><span class="no-image">No Image Selected</span></div>
+              <p></p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="modal-footer">
+            <button type="button" class="newphoto">Upload New Photo</button>
+            <button type="submit" class="bluebtn">Save</button>
+            <button type="button" class="cancelbtn" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 02-->
+    <nav class="navbar-fixed-bottom">
+  <div class="container-fluid"><div class="col-md-6 no-gutter"><p>© 2016 BIOCLINICA - Trial Manager</p></div><div class"col-md-6 no-gutter"><p class="versions">Version 1.0</p></div></div>
+</nav>
+    <!-- FOOTER -->
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="row">
+        <div class="mobile-menu top-icons">
+          	<a class="menu-toggle pull-right fa fa-bars dropdown" href="#"></a>
+           
+      
+            
+          </div>
+          <div class="navbar-header col-md-4 col-xs-6">
+           
+            <div class="top-logo">
+              <a  class="pull-left" href="#">
+              <img class="media-object" src="images/top_logo.svg" alt="Bioclinica Trial Manager">
+               
+              </a>
+            </div>
+          </div>
+
+          <div class="username">
+            <a class="pull-right username-in fa" href="#">Michael Fassbender</a>     
+          </div>
+          <div class="left-line"></div>
+          <div class="top-icons col-md-5 col-xs-12 ">
+        
+           <div class="grid-icon"><a class="pull-right icon-apps" href="#"></a></div>     
+
+           <div class="search-bar"><span class="lnr lnr-magnifier"></span><input class="search-input col-md-12 no-gutter"></input></div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <!-- TOP MENU -->
+      <nav id="sidebar" role="navigation" data-step="2" data-position="right" class="navbar-default navbar-static-side">
+
+            <div class="sidebar-collapse menu-scroll nav nav-sidebar col-sm-12 w3-animate-opacity">
+           
+                <ul id="side-menu" class="nav">
+                    
+                    <div class="clearfix"></div>
+                    <li class="product-title"><a class=" menu-toggle" href="#"><i class="lnr lnr-screen">
+                        
+                    </i><span class="menu-title">Product<i class="lnr lnr-menu"></i></span>
+                    
+                    </a>
+
+                    
+
+                    <div class="clearfix"></div>
+
+                    <div class="user-card">
+                         <div class="username-left">
+                             <div class="lnr photo"></div>
+                             <label>Express</label>
+                             <div class="clearfix"></div>    
+                         </div>
+                        <div class="info col-sm-3 col-md-2">
+                          <div class="col-md-12 no-gutter"><label>Project Manager:</label><p> Lynn Fraser</p></div>
+                        <div class="col-md-12 no-gutter"><label>Contact:</label><a href="mailto:mfassbender@bioclinica.com"> express@bioclinica.com</a></div>
+                        <div class="col-md-12 no-gutter"><label>Versions:</label><p> 5.2, 5.3, 5.4</p></div>
+                        <div class="clearfix"></div>    
+
+                        </div>
+                    <div class="clearfix"></div>    
+                    </div>
+                        
+                       
+                    </li>
+                    
+
+
+                     <li><a href="#"><i class="lnr lnr-book">
+                        <div class="icon-bg bg-green"></div>
+                    </i><span class="menu-title">General Information</span></a>
+                       
+                    </li>
+                    <li><a href="#"><i class="lnr lnr-laptop">
+                        <div class="icon-bg bg-violet"></div>
+                    </i><span class="menu-title">Versions</span></a>
+                      
+                    </li>
+                    <li class="active"><a href="#"><i class="lnr lnr-diamond">
+                        <div class="icon-bg bg-blue"></div>
+                    </i><span class="menu-title">Sponsors</span></a>
+                          
+                    </li>
+                    <li><a href="#"><i class="lnr lnr-heart-pulse">
+                        <div class="icon-bg bg-red"></div>
+                    </i><span class="menu-title">Studies</span></a>
+                      
+                    </li>
+                    <li><a href="#"><i class="lnr lnr-map-marker">
+                        <div class="icon-bg bg-yellow"></div>
+                    </i><span class="menu-title">Sites</span></a>
+                       
+                    </li>
+                    <li><a href="#"><i class="lnr lnr-user">
+                        <div class="icon-bg bg-primary"></div>
+                    </i><span class="menu-title">Users</span></a>
+                      
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+      <!-- LEFT BAR -->
+      <div id="page-wrapper">
+
+            <div class="page-content">
+        <!-- jumbotron enlarges fonts and puts everything in a gray box with rounded corners. If jumbotron is outside a container it fills the total width. You can change the styles by placing the changes after the Bootstrap CDN link -->
+        <div class="jumbotron">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <ol class="breadcrumb">
+                <li class="active"><h3>Contact Information</h3></li>
+              </ol>
+              <a data-toggle="modal" data-target="#editModal" class="edit_envelope"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit</a>
+            </div>
+            <div class="row panel-body">
+              <div class="col-md-1 col-sm-3 col-xs-2 image-cont">
+                <div class="tile">
+                  <div class="content edit_image"><a data-toggle="modal" data-target="#photoModal" href="#"></a></div>
+                </div>
+              </div>
+              <div class="field-container col-md-11 col-sm-9 col-xs-10">
+                <div class="field col-md-12 col-sm-12">
+                  <label>Name:</label>
+                  <p>Michael J. Fassbender, Jr</p>
+                </div>
+                <div class="field col-md-6 col-sm-12"><label>Contact:</label><a href="mailto:express@bioclinica.com">express@bioclinica.com</a></div>
+                <div class="field col-md-6 col-sm-12">
+                  <label>Phone:</label>
+                  <p>+123 2344 2345</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row col-md-12 tiles-container">
+          <div class="dashtiles tiles">
+            <div class="tile products-tile"><a href="#" class="content"><span class="span-container"><span class="counter">999</span></span><span class="tile-title">PRODUCTS</span></a></div>
+          </div>
+          <div class="dashtiles tiles">
+            <div class="tile customers-tile"><a href="#" class="content"><span class="span-container"><span class="counter">999</span></span><span class="tile-title">CUSTOMERS</span></a></div>
+          </div>
+          <div class="dashtiles tiles">
+            <div class="tile cros-tile"><a href="#" class="content"><span class="span-container"><span class="counter">999</span></span><span class="tile-title">CRO'S</span></a></div>
+          </div>
+          <div class="dashtiles tiles">
+            <div class="tile sponsors-tile"><a href="#" class="content"><span class="span-container"><span class="counter">999</span></span><span class="tile-title">SPONSORS</span></a></div>
+          </div>
+          <div class="dashtiles tiles">
+            <div class="tile studies-tile"><a href="#" class="content"><span class="span-container"><span class="counter">999</span></span><span class="tile-title">STUDIES</span></a></div>
+          </div>
+          <div class="dashtiles tiles">
+            <div class="tile sites-tile"><a href="#" class="content disabled"><span class="span-container"><span class="counter">999</span></span><span class="tile-title">SITES</span></a></div>
+          </div>
+          <div class="dashtiles tiles">
+            <div class="tile users-tile"><a href="#" class="content"><span class="span-container"><span class="counter">999999</span></span><span class="tile-title">USERS</span></a></div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!--END OF MAIN --> 
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-migrate-1.2.1.min.js"></script>
+    <script src="script/jquery.menu.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+      function changeMe(sel)
+      {
+        sel.style.color = "#000";              
+      }
+    </script>
+  </body>
+</html>

@@ -168,6 +168,7 @@ a:hover{
 	border: 0px;
 	border-radius: 0px;
 	margin-bottom: 0;
+	padding: 20px;
 }
 .breadcrumb {
 
@@ -277,12 +278,13 @@ button:active{
 /* Other Elements*/
 
 .jumbotron{
+	width: 100%;
 	 border-radius: 0px;
     background-color:#ffffff;
     color:#333333;
     -webkit-box-shadow: 1px 3px 0px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 1px 3px 0px 0px rgba(0,0,0,0.2);
-    box-shadow: 1px 3px 0px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.2);
     padding: 0;
     padding-left: 0!important;
     padding-right: 0!important;
@@ -314,9 +316,8 @@ button:active{
 .navbar-fixed-bottom{
 	height: 40px;
 	background-color: #e2e5e8;
-	position: fixed;
-	bottom: 0;
-	left: 250px;
+	position: absolute;
+	bottom: 0px;
 	padding-right: 20px;
 }
 .navbar-fixed-bottom p{
@@ -942,7 +943,8 @@ background: -1px -1px url(images/sponsors-icon.png) #ffffff;
 }
 .panel-default>.panel-heading h3{
 	margin: 0;
-	padding: 20px;
+	padding-bottom: 20px;
+	padding-left: 0;
 	font-family: 'open_sans';
 	font-weight:normal;
 
@@ -956,7 +958,7 @@ background: -1px -1px url(images/sponsors-icon.png) #ffffff;
 
 }
 .panel-default>.panel-heading .right-button{
-	padding: 20px;
+	padding-bottom: 20px;
 }
 .panel-default>.panel-heading .bluebtn{
 margin-left: 0;
@@ -1269,6 +1271,9 @@ top: 6px;
     font-weight: 200;
 }
 
+.jumbotron .collapse-form p {
+ display: inline;
+}
 /*  VERSIONS */
 
 
@@ -1382,7 +1387,7 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
     border:none;
 }
 .table-cont{
-	padding: 0px 20px 0px 20px;
+	padding:0px;
 	overflow-x:auto;
 }
 
@@ -1420,7 +1425,7 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
 
 .custom-modal{
     width: 50%;
-    margin: 30px auto;
+    margin: 70px auto;
 }
 
 .modal-content{
